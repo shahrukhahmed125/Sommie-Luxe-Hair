@@ -1,0 +1,6 @@
+{
+  "name": "Sommie Luxe Hair - Luxury Wigs & Extensions",
+  "description": "Premium luxury raw and virgin human hair wigs, HD lace frontals, and extensions. Experience confidence and timeless elegance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
