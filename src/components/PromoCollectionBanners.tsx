@@ -14,7 +14,7 @@ export const PromoCollectionBanners: React.FC<PromoCollectionBannersProps> = () 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Subtle section header */}
         <div className="text-center max-w-xl mx-auto mb-10">
-          <p className="text-xs uppercase tracking-[0.2em] font-semibold text-[#C6A15B] mb-2">
+          <p className="text-xs uppercase tracking-[0.2em] font-semibold text-neutral-700 mb-2">
             CURATED SIGNATURE COLLECTIONS
           </p>
           <h2 className="font-cormorant text-3xl sm:text-4xl font-bold text-[#050505]">
@@ -41,7 +41,7 @@ export const PromoCollectionBanners: React.FC<PromoCollectionBannersProps> = () 
               <h3 className="font-cormorant text-2xl font-bold mb-2 text-white group-hover:text-[#F5F0E6] transition-colors">
                 Wear & Go™ Glueless Wigs
               </h3>
-              <p className="text-xs text-neutral-300 font-light mb-6 line-clamp-2">
+              <p className="text-xs text-neutral-200 font-light mb-6">
                 Pre-cut HD lace, breathable 3D dome cap, and zero glue. Ready in under 3 minutes.
               </p>
               <button
@@ -71,7 +71,7 @@ export const PromoCollectionBanners: React.FC<PromoCollectionBannersProps> = () 
               <h3 className="font-cormorant text-2xl font-bold mb-2 text-white group-hover:text-[#F5F0E6] transition-colors">
                 Raw Temple Hair Bundles
               </h3>
-              <p className="text-xs text-neutral-300 font-light mb-6 line-clamp-2">
+              <p className="text-xs text-neutral-200 font-light mb-6">
                 100% cuticle-aligned virgin hair. Bleaches effortlessly to 613 platinum blonde with lasting shine.
               </p>
               <button
@@ -101,7 +101,7 @@ export const PromoCollectionBanners: React.FC<PromoCollectionBannersProps> = () 
               <h3 className="font-cormorant text-2xl font-bold mb-2 text-white group-hover:text-[#F5F0E6] transition-colors">
                 Ultra-Thin HD Frontals
               </h3>
-              <p className="text-xs text-neutral-300 font-light mb-6 line-clamp-2">
+              <p className="text-xs text-neutral-200 font-light mb-6">
                 Feather-light Swiss HD lace crafted to disappear into all skin complexions without tinting sprays.
               </p>
               <button

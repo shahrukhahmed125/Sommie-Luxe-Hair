@@ -15,7 +15,7 @@ export const NewArrivals: React.FC = () => {
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-[#C6A15B] mb-2">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-neutral-700 mb-2">
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>JUST UNVEILED · SPRING 2026</span>
             </div>

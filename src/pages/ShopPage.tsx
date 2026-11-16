@@ -81,7 +81,7 @@ export const ShopPage: React.FC = () => {
     <div className="py-10 sm:py-16 bg-[#FAF7F2] min-h-screen">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <div className="text-xs text-neutral-400 mb-6 flex items-center gap-2">
+        <div className="text-xs text-neutral-600 mb-6 flex items-center gap-2">
           <button onClick={() => navigateTo('home')} className="hover:text-[#050505]">
             Home
           </button>
@@ -90,7 +90,7 @@ export const ShopPage: React.FC = () => {
           {selectedTexture !== 'all' && (
             <>
               <span>/</span>
-              <span className="text-[#C6A15B] uppercase font-semibold">{selectedTexture}</span>
+              <span className="text-neutral-700 uppercase font-semibold">{selectedTexture}</span>
             </>
           )}
         </div>
@@ -98,7 +98,7 @@ export const ShopPage: React.FC = () => {
         {/* Page Hero Title */}
         <div className="pb-8 mb-10 border-b border-[#F5F0E6] flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-[#C6A15B] mb-2">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-neutral-700 mb-2">
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>THE ROYAL COLLECTION</span>
             </div>
@@ -131,7 +131,7 @@ export const ShopPage: React.FC = () => {
               </span>
               <button
                 onClick={resetFilters}
-                className="text-[11px] text-[#C6A15B] hover:text-[#050505] transition-colors"
+                className="text-[11px] text-neutral-700 hover:text-[#050505] transition-colors"
               >
                 Reset All
               </button>

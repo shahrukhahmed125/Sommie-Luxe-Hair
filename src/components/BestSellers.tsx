@@ -27,7 +27,7 @@ export const BestSellers: React.FC<BestSellersProps> = ({ initialFilter = 'all' 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-[#C6A15B] mb-2">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-neutral-700 mb-2">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>MOST COVETED STYLES</span>
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />

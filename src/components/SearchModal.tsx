@@ -56,7 +56,7 @@ export const SearchModal: React.FC = () => {
         {/* Popular Searches */}
         {!query && (
           <div className="p-6">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#C6A15B] mb-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-3">
               Trending Searches
             </p>
             <div className="flex flex-wrap gap-2">
@@ -98,8 +98,8 @@ export const SearchModal: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                   <div className="flex-1 min-w-0">
-                    <p className="text-[10px] text-[#C6A15B] uppercase font-semibold">{p.collection}</p>
-                    <h4 className="font-playfair font-bold text-sm text-[#050505] truncate">{p.name}</h4>
+                    <p className="text-[10px] text-neutral-700 uppercase font-semibold">{p.collection}</p>
+                    <h4 className="font-playfair font-bold text-sm text-[#050505]">{p.name}</h4>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs font-bold text-[#050505] tabular-nums">{formatPrice(p)}</span>
                       <div className="flex items-center text-[#D4AF37] text-[10px]">

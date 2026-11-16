@@ -234,3 +234,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #D4AF37;
 }
+
+@media (max-width: 525px) {
+  .absolute.left-6.sm\:left-10.lg\:left-16.bottom-24.z-30.flex.items-center.gap-2\.5 {
+    display: none !important;
+  }
+
+  .absolute.right-6.sm\:right-10.bottom-24.z-30.flex.items-center.gap-3 {
+    left: 30%;
+    bottom: 10px;
+  }
+}

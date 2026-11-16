@@ -19,7 +19,7 @@ export const GuidePage: React.FC = () => {
 
         {/* Hero */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-[#C6A15B] mb-2">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-neutral-700 mb-2">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>THE MASTER CONCIERGE EDUCATION</span>
           </div>
@@ -47,7 +47,7 @@ export const GuidePage: React.FC = () => {
               <thead>
                 <tr className="bg-[#FAF8F5] text-[#050505] border-b border-[#E8DFC9]">
                   <th className="p-4 font-bold uppercase tracking-wider">Features</th>
-                  <th className="p-4 font-bold text-[#C6A15B] uppercase tracking-wider bg-[#F5F0E6]/50">
+                  <th className="p-4 font-bold text-neutral-700 uppercase tracking-wider bg-[#F5F0E6]/50">
                     Sommie Luxe Swiss HD Lace
                   </th>
                   <th className="p-4 font-bold text-neutral-500 uppercase tracking-wider">
@@ -100,7 +100,7 @@ export const GuidePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-sm border border-neutral-200">
-              <span className="text-xs uppercase font-bold text-[#C6A15B] tracking-wider block mb-1">
+              <span className="text-xs uppercase font-bold text-neutral-700 tracking-wider block mb-1">
                 STEP 01: CIRCUMFERENCE
               </span>
               <h3 className="font-cormorant text-xl font-bold text-[#050505] mb-2">Around the Head</h3>
@@ -110,7 +110,7 @@ export const GuidePage: React.FC = () => {
             </div>
 
             <div className="bg-white p-6 rounded-sm border border-neutral-200">
-              <span className="text-xs uppercase font-bold text-[#C6A15B] tracking-wider block mb-1">
+              <span className="text-xs uppercase font-bold text-neutral-700 tracking-wider block mb-1">
                 STEP 02: FRONT TO NAPE
               </span>
               <h3 className="font-cormorant text-xl font-bold text-[#050505] mb-2">Forehead to Back</h3>
@@ -120,7 +120,7 @@ export const GuidePage: React.FC = () => {
             </div>
 
             <div className="bg-white p-6 rounded-sm border border-neutral-200">
-              <span className="text-xs uppercase font-bold text-[#C6A15B] tracking-wider block mb-1">
+              <span className="text-xs uppercase font-bold text-neutral-700 tracking-wider block mb-1">
                 STEP 03: EAR TO EAR
               </span>
               <h3 className="font-cormorant text-xl font-bold text-[#050505] mb-2">Across Crown</h3>

@@ -292,7 +292,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onShopNow, onExploreCamp
                     }`}>
                       {pt.title}
                     </p>
-                    <p className="text-[11px] text-neutral-400 font-light truncate">
+                    <p className="text-[11px] text-neutral-400 font-light">
                       {pt.desc}
                     </p>
                   </div>

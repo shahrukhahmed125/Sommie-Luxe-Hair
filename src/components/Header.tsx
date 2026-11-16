@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
               <img
                 src="/assets/aistudio/image__11__86896f45.png"
                 alt="Sommie Luxe Hair Logo - Golden Crown and SL Monogram"
-                className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+                className="h-16 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
                 referrerPolicy="no-referrer"
               />
             </div>

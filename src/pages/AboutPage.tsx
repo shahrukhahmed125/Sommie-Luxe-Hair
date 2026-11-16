@@ -19,7 +19,7 @@ export const AboutPage: React.FC = () => {
 
         {/* Hero Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fadeIn">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-[#C6A15B] mb-3">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-neutral-700 mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>HERITAGE, PASSION & ROYALTY</span>
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
@@ -33,7 +33,7 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Big Editorial Image with Ken Burns breathing animation */}
-        <div className="relative aspect-[16/7] w-full rounded-sm overflow-hidden mb-20 shadow-2xl bg-neutral-900 group">
+        <div className="relative aspect-[4/3] sm:aspect-[16/7] w-full rounded-sm overflow-hidden mb-20 shadow-2xl bg-neutral-900 group">
           <img
             src="/src/assets/images/editorial_founder_about_1794225327995.jpg"
             alt="Sommie Luxe Hair Atelier - Inspecting Raw Human Hair"
@@ -41,7 +41,7 @@ export const AboutPage: React.FC = () => {
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8 text-white max-w-2xl">
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 text-white max-w-2xl">
             <p className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-[0.2em] mb-1">
               THE ARTISAN PROCESS
             </p>

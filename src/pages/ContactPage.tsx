@@ -35,7 +35,7 @@ export const ContactPage: React.FC = () => {
 
         {/* Hero */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-[#C6A15B] mb-2">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-neutral-700 mb-2">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>GLOBAL LUXURY ATELIERS</span>
           </div>
@@ -54,7 +54,7 @@ export const ContactPage: React.FC = () => {
             {/* London Atelier */}
             <div className="p-8 bg-[#FAF8F5] border border-[#E8DFC9] rounded-sm shadow-sm space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-[#C6A15B] font-semibold uppercase tracking-[0.2em]">
+                <span className="text-[10px] text-neutral-700 font-semibold uppercase tracking-[0.2em]">
                   UNITED KINGDOM FLAGSHIP
                 </span>
                 <span className="text-xs font-semibold px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded">
@@ -83,7 +83,7 @@ export const ContactPage: React.FC = () => {
             {/* Lagos Atelier */}
             <div className="p-8 bg-[#FAF8F5] border border-[#E8DFC9] rounded-sm shadow-sm space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] text-[#C6A15B] font-semibold uppercase tracking-[0.2em]">
+                <span className="text-[10px] text-neutral-700 font-semibold uppercase tracking-[0.2em]">
                   NIGERIA SUITE & SHOWROOM
                 </span>
                 <span className="text-xs font-semibold px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded">

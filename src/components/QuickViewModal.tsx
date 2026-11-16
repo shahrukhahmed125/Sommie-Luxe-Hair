@@ -91,7 +91,7 @@ export const QuickViewModal: React.FC = () => {
             <div>
               {/* Collection & Rating */}
               <div className="flex items-center justify-between text-xs text-neutral-500 mb-2">
-                <span className="text-[#C6A15B] font-semibold uppercase tracking-wider">
+                <span className="text-neutral-700 font-semibold uppercase tracking-wider">
                   {quickViewProduct.collection}
                 </span>
                 <div className="flex items-center gap-1 text-[#D4AF37]">
@@ -114,7 +114,7 @@ export const QuickViewModal: React.FC = () => {
                 <span className="text-sm text-neutral-400 line-through tabular-nums">
                   {formatPrice(quickViewProduct, true)}
                 </span>
-                <span className="text-xs font-semibold text-[#C6A15B] bg-[#F5F0E6] px-2 py-0.5 rounded">
+                <span className="text-xs font-semibold text-neutral-800 bg-[#F5F0E6] px-2 py-0.5 rounded">
                   VIP Privilege Applied
                 </span>
               </div>
@@ -128,7 +128,7 @@ export const QuickViewModal: React.FC = () => {
               {/* Length Selector */}
               <div className="mb-4">
                 <label className="block text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
-                  Select Length: <span className="text-[#C6A15B]">{selectedLength}" inches</span>
+                  Select Length: <span className="text-neutral-800">{selectedLength}" inches</span>
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {quickViewProduct.lengths.map((len) => (
@@ -150,7 +150,7 @@ export const QuickViewModal: React.FC = () => {
               {/* Density Selector */}
               <div className="mb-4">
                 <label className="block text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
-                  Cap Density: <span className="text-[#C6A15B]">{selectedDensity}</span>
+                  Cap Density: <span className="text-neutral-800">{selectedDensity}</span>
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {quickViewProduct.densities.map((den) => (

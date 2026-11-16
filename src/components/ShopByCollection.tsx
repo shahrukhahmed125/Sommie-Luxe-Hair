@@ -16,7 +16,7 @@ export const ShopByCollection: React.FC<ShopByCollectionProps> = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-[#D4AF37]/20 gap-4">
           <div>
-            <span className="text-xs uppercase tracking-[0.22em] font-semibold text-[#C6A15B] block mb-2">
+            <span className="text-xs uppercase tracking-[0.22em] font-semibold text-neutral-700 block mb-2">
               DISCOVER SIGNATURE TEXTURES
             </span>
             <h2 className="font-cormorant text-4xl sm:text-5xl font-bold text-[#050505]">

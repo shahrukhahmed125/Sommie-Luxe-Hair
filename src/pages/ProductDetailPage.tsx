@@ -71,7 +71,7 @@ export const ProductDetailPage: React.FC = () => {
     <div className="py-8 sm:py-14 bg-[#FAF7F2] min-h-screen">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <div className="text-xs text-neutral-400 mb-8 flex items-center gap-2">
+        <div className="text-xs text-neutral-600 mb-8 flex flex-wrap items-center gap-2">
           <button onClick={() => navigateTo('home')} className="hover:text-[#050505] transition-colors">
             Home
           </button>
@@ -87,7 +87,7 @@ export const ProductDetailPage: React.FC = () => {
             {product.category.replace('-', ' ')}
           </button>
           <span>/</span>
-          <span className="text-[#050505] font-semibold truncate max-w-xs">{product.name}</span>
+          <span className="text-[#050505] font-semibold break-words">{product.name}</span>
         </div>
 
         {/* Top Split View: Gallery Left, Purchase Module Right */}
@@ -145,7 +145,7 @@ export const ProductDetailPage: React.FC = () => {
             <div>
               {/* Collection & Rating */}
               <div className="flex items-center justify-between text-xs text-neutral-500 mb-2">
-                <span className="text-[#C6A15B] font-semibold uppercase tracking-wider">
+                <span className="text-neutral-700 font-semibold uppercase tracking-wider">
                   {product.collection}
                 </span>
                 <div className="flex items-center gap-1.5 text-[#D4AF37]">
@@ -167,25 +167,25 @@ export const ProductDetailPage: React.FC = () => {
             </div>
 
             {/* Pricing */}
-            <div className="flex items-baseline gap-3 pb-6 border-b border-[#F5F0E6]">
+            <div className="flex flex-wrap items-baseline gap-3 pb-6 border-b border-[#F5F0E6]">
               <span className="font-montserrat text-3xl font-bold text-[#050505] tabular-nums">
                 {formatPrice(product)}
               </span>
               <span className="text-base text-neutral-400 line-through tabular-nums">
                 {formatPrice(product, true)}
               </span>
-              <span className="text-xs font-semibold text-[#C6A15B] bg-[#FAF7F2] border border-[#C6A15B]/30 px-2.5 py-1 rounded">
+              <span className="text-xs font-semibold text-neutral-800 bg-[#FAF7F2] border border-[#C6A15B]/30 px-2.5 py-1 rounded">
                 Save 18% with VIP Code: LUXE15
               </span>
             </div>
 
             {/* Length Selector */}
             <div>
-              <div className="flex items-center justify-between text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
-                <span>Select Length: <span className="text-[#C6A15B]">{selectedLength}" inches ({Math.round(selectedLength * 2.54)} cm)</span></span>
+              <div className="flex flex-wrap items-center justify-between gap-y-2 text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
+                <span>Select Length: <span className="text-neutral-800">{selectedLength}" inches ({Math.round(selectedLength * 2.54)} cm)</span></span>
                 <button
                   onClick={() => setIsGuideOpen(true)}
-                  className="text-[11px] text-[#C6A15B] hover:text-[#050505] flex items-center gap-1 normal-case font-normal"
+                  className="text-[11px] text-neutral-700 hover:text-[#050505] flex items-center gap-1 normal-case font-normal"
                 >
                   <HelpCircle className="w-3.5 h-3.5" />
                   <span>Length Chart</span>
@@ -211,7 +211,7 @@ export const ProductDetailPage: React.FC = () => {
             {/* Density Selector */}
             <div>
               <div className="text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
-                Hair Density: <span className="text-[#C6A15B]">{selectedDensity}</span>
+                Hair Density: <span className="text-neutral-800">{selectedDensity}</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {product.densities.map((den) => (
@@ -255,9 +255,9 @@ export const ProductDetailPage: React.FC = () => {
 
             {/* Cap Sizing */}
             <div>
-              <div className="flex items-center justify-between text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
+              <div className="flex flex-wrap items-center justify-between gap-y-2 text-xs font-semibold text-[#050505] uppercase tracking-wider mb-2">
                 <span>Cap Circumference:</span>
-                <span className="text-[#C6A15B]">{selectedCapSize}</span>
+                <span className="text-neutral-800">{selectedCapSize}</span>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 {(['Small (21.5")', 'Medium (22.5")', 'Large (23.5")'] as const).map((size) => (
@@ -318,7 +318,7 @@ export const ProductDetailPage: React.FC = () => {
 
             {/* Express Delivery Estimation Box */}
             <div className="p-4 bg-[#FAF7F2] border border-[#E8DFC9] rounded-sm text-xs space-y-2">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="font-semibold text-[#050505] flex items-center gap-1.5">
                   <Truck className="w-4 h-4 text-[#C6A15B]" />
                   <span>Estimated Delivery Time:</span>
@@ -425,7 +425,7 @@ export const ProductDetailPage: React.FC = () => {
         {relatedProducts.length > 0 && (
           <div className="border-t border-[#E8DFC9] pt-14">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#C6A15B] block mb-1">
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-neutral-700 block mb-1">
                 COMPLETE YOUR ROYALTY
               </span>
               <h2 className="font-cormorant text-3xl sm:text-4xl font-bold text-[#050505]">

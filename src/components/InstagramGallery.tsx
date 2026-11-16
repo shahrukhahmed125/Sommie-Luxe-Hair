@@ -10,7 +10,7 @@ export const InstagramGallery: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-[#C6A15B] mb-2">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-neutral-700 mb-2">
             <Instagram className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>COMMUNITY OF QUEENS</span>
           </div>
@@ -18,7 +18,7 @@ export const InstagramGallery: React.FC = () => {
             FOLLOW THE LUXURY
           </h2>
           <p className="text-xs sm:text-sm text-neutral-600 font-light mb-4">
-            Tag <span className="font-semibold text-[#050505]">@sommieluxehair</span> and use <span className="font-semibold text-[#C6A15B]">#SommieLuxeQueen</span> to be featured in our international showcase.
+            Tag <span className="font-semibold text-[#050505]">@sommieluxehair</span> and use <span className="font-semibold text-neutral-700">#SommieLuxeQueen</span> to be featured in our international showcase.
           </p>
           <a
             href="https://instagram.com"
@@ -51,7 +51,7 @@ export const InstagramGallery: React.FC = () => {
                   <Heart className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />
                   <span>{post.likes}</span>
                 </div>
-                <p className="text-[11px] text-[#F5F0E6] line-clamp-2 font-light">
+                <p className="text-[11px] text-[#F5F0E6] font-light">
                   {post.style}
                 </p>
               </div>
@@ -76,7 +76,7 @@ export const InstagramGallery: React.FC = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-sm text-[#050505]">{selectedPost.user}</span>
-                  <span className="text-[11px] text-[#C6A15B] font-semibold">· Verified Muse</span>
+                  <span className="text-[11px] text-neutral-700 font-semibold">· Verified Muse</span>
                 </div>
                 <div className="flex items-center gap-1 text-xs text-neutral-500">
                   <Heart className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />

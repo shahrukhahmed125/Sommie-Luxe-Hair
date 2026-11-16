@@ -126,7 +126,7 @@ export const CartDrawer: React.FC = () => {
                   <div className="flex-1 flex flex-col justify-between text-xs">
                     <div>
                       <div className="flex items-start justify-between gap-2">
-                        <h4 className="font-playfair font-bold text-sm text-[#050505] leading-snug line-clamp-2">
+                        <h4 className="font-playfair font-bold text-sm text-[#050505] leading-snug">
                           {item.product.name}
                         </h4>
                         <button
@@ -141,7 +141,7 @@ export const CartDrawer: React.FC = () => {
                       <div className="text-[11px] text-neutral-500 mt-1 space-y-0.5">
                         <p>Length: <span className="font-semibold text-neutral-800">{item.selectedLength}" inches</span></p>
                         <p>Density: <span className="font-semibold text-neutral-800">{item.selectedDensity}</span></p>
-                        <p className="truncate">Lace: <span className="font-semibold text-neutral-800">{item.selectedLace}</span></p>
+                        <p>Lace: <span className="font-semibold text-neutral-800">{item.selectedLace}</span></p>
                       </div>
                     </div>
 

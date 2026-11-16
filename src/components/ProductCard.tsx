@@ -111,13 +111,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {/* Product Title */}
           <h3
             onClick={handleOpenPDP}
-            className="font-cormorant text-base sm:text-lg font-bold text-[#050505] line-clamp-2 leading-snug cursor-pointer hover:text-[#C6A15B] transition-colors mb-1.5"
+            className="font-cormorant text-base sm:text-lg font-bold text-[#050505] leading-snug cursor-pointer hover:text-[#C6A15B] transition-colors mb-1.5"
           >
             {product.name}
           </h3>
 
           {/* Hair Origin / Subtitle */}
-          <p className="text-xs text-neutral-500 font-light line-clamp-1 mb-3">
+          <p className="text-xs text-neutral-600 font-light mb-3">
             {product.subtitle}
           </p>
 
@@ -157,7 +157,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <span className="text-xs text-neutral-400 line-through tabular-nums">
               {formatPrice(product, true)}
             </span>
-            <span className="text-[10px] font-semibold text-[#C6A15B] uppercase tracking-wider">
+            <span className="text-[10px] font-semibold text-neutral-700 uppercase tracking-wider">
               SAVE 18%
             </span>
           </div>

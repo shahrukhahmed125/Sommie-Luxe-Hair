@@ -79,7 +79,7 @@ export const CustomerReviews: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading with Cormorant Garamond */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-[#C6A15B] mb-2">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-neutral-700 mb-2">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>AUTHENTIC CLIENT EXPERIENCES</span>
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
@@ -191,8 +191,8 @@ export const CustomerReviews: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                   <div className="min-w-0">
-                    <p className="font-semibold text-xs text-[#050505] truncate">{rev.author}</p>
-                    <p className="text-[11px] text-[#C6A15B] font-medium truncate">{rev.location}</p>
+                    <p className="font-semibold text-xs text-[#050505]">{rev.author}</p>
+                    <p className="text-[11px] text-neutral-700 font-medium">{rev.location}</p>
                   </div>
                 </div>
 
@@ -225,7 +225,7 @@ export const CustomerReviews: React.FC = () => {
               {/* Product Spec & Helpful Button */}
               <div className="pt-4 border-t border-neutral-100 flex items-center justify-between text-xs">
                 <div className="min-w-0 pr-2">
-                  <p className="text-[10px] text-neutral-400 truncate">
+                  <p className="text-[10px] text-neutral-600">
                     {rev.hairLength}
                   </p>
                   <p className="text-[10px] text-neutral-400">{rev.date}</p>
@@ -249,7 +249,7 @@ export const CustomerReviews: React.FC = () => {
       {isWriteModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
           <div
-            className="bg-white max-w-lg w-full rounded-sm shadow-2xl border border-[#D4AF37]/40 overflow-hidden"
+            className="bg-white max-w-lg w-full max-h-[calc(100dvh-2rem)] overflow-y-auto rounded-sm shadow-2xl border border-[#D4AF37]/40"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6 bg-[#050505] text-white flex items-center justify-between border-b border-[#D4AF37]/30">
@@ -288,7 +288,7 @@ export const CustomerReviews: React.FC = () => {
               </div>
 
               {/* Author & City */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block font-semibold mb-1">Your Name *</label>
                   <input

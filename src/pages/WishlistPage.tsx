@@ -23,7 +23,7 @@ export const WishlistPage: React.FC = () => {
 
         {/* Hero */}
         <div className="text-center max-w-xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-[#C6A15B] mb-2">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-neutral-700 mb-2">
             <Heart className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />
             <span>SAVED ROYAL PIECES</span>
           </div>

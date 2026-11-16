@@ -29,7 +29,7 @@ export const AnnouncementBar: React.FC = () => {
 
   return (
     <div className="bg-[#050505] text-[#F5F0E6] border-b border-[#D4AF37]/20 text-[11px] sm:text-xs tracking-wider uppercase font-medium">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-9 flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-6 min-h-9 py-1 flex items-center justify-between">
         {/* Left: Quick Guide & Concierge */}
         <div className="hidden lg:flex items-center gap-4 text-[#C6A15B]">
           <button
@@ -44,9 +44,9 @@ export const AnnouncementBar: React.FC = () => {
         </div>
 
         {/* Center: Rotating Luxury Announcement */}
-        <div className="flex-1 text-center flex items-center justify-center gap-2 overflow-hidden px-2">
+        <div className="min-w-0 flex-1 text-center flex items-center justify-center gap-1 sm:gap-2 px-1 sm:px-2">
           <Sparkles className="w-3 h-3 text-[#D4AF37] shrink-0" />
-          <span className="transition-opacity duration-500 font-medium truncate">
+          <span className="min-w-0 transition-opacity duration-500 font-medium text-[9px] sm:text-xs leading-tight">
             {messages[currentMessageIndex]}
           </span>
           <Sparkles className="w-3 h-3 text-[#D4AF37] shrink-0" />

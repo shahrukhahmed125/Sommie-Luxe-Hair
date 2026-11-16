@@ -38,7 +38,7 @@ export const AboutBrand: React.FC = () => {
 
           {/* Right Column: Editorial Copy with Cormorant Garamond */}
           <div className="lg:pl-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-[#C6A15B] mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] font-semibold text-neutral-700 mb-3">
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>THE SOMMIE LUXE PHILOSOPHY</span>
             </div>
