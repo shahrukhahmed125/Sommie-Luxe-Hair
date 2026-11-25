@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Star, Heart, Check, ShoppingBag, ShieldCheck, Sparkles } from 'lucide-react';
+import { X, Star, Heart, Check, ShoppingBag, ShieldCheck, Sparkles, Play } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 export const QuickViewModal: React.FC = () => {
@@ -8,7 +8,10 @@ export const QuickViewModal: React.FC = () => {
   const [selectedLength, setSelectedLength] = useState<number>(24);
   const [selectedDensity, setSelectedDensity] = useState<string>('200% (Glamour Full)');
   const [selectedLace, setSelectedLace] = useState<string>('13x6 HD Invisible Swiss Lace');
-  const [activeImage, setActiveImage] = useState<string>('');
+  const [activeMedia, setActiveMedia] = useState<{ type: 'image' | 'video'; src: string }>({
+    type: 'image',
+    src: ''
+  });
   const [quantity, setQuantity] = useState<number>(1);
 
   useEffect(() => {
@@ -16,7 +19,11 @@ export const QuickViewModal: React.FC = () => {
       setSelectedLength(quickViewProduct.lengths[0]);
       setSelectedDensity(quickViewProduct.densities[0]);
       setSelectedLace(quickViewProduct.laceTypes[0]);
-      setActiveImage(quickViewProduct.image);
+      setActiveMedia(
+        quickViewProduct.video
+          ? { type: 'video', src: quickViewProduct.video }
+          : { type: 'image', src: quickViewProduct.image }
+      );
       setQuantity(1);
     }
   }, [quickViewProduct]);
@@ -50,12 +57,24 @@ export const QuickViewModal: React.FC = () => {
           {/* Gallery View */}
           <div className="bg-[#050505] p-6 flex flex-col justify-between">
             <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden border border-white/10">
-              <img
-                src={activeImage || quickViewProduct.image}
-                alt={quickViewProduct.name}
-                className="w-full h-full object-cover object-top"
-                referrerPolicy="no-referrer"
-              />
+              {activeMedia.type === 'video' ? (
+                <video
+                  key={activeMedia.src}
+                  src={activeMedia.src}
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <img
+                  src={activeMedia.src || quickViewProduct.image}
+                  alt={quickViewProduct.name}
+                  className="w-full h-full object-cover object-top"
+                  referrerPolicy="no-referrer"
+                />
+              )}
               {quickViewProduct.badge && (
                 <span className="absolute top-3 left-3 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 bg-[#D4AF37] text-black rounded-sm">
                   {quickViewProduct.badge}
@@ -65,22 +84,39 @@ export const QuickViewModal: React.FC = () => {
 
             {/* Thumbnail switcher */}
             <div className="flex gap-2 mt-4">
-              <button
-                onClick={() => setActiveImage(quickViewProduct.image)}
-                className={`w-14 h-16 rounded overflow-hidden border-2 transition-all ${
-                  activeImage === quickViewProduct.image ? 'border-[#D4AF37]' : 'border-white/20 opacity-60'
-                }`}
-              >
-                <img src={quickViewProduct.image} alt="Angle 1" className="w-full h-full object-cover" />
-              </button>
-              {quickViewProduct.hoverImage && (
+              {!quickViewProduct.video && (
+                <>
+                  <button
+                    onClick={() => setActiveMedia({ type: 'image', src: quickViewProduct.image })}
+                    className={`w-14 h-16 rounded overflow-hidden border-2 transition-all ${
+                      activeMedia.type === 'image' && activeMedia.src === quickViewProduct.image ? 'border-[#D4AF37]' : 'border-white/20 opacity-60'
+                    }`}
+                  >
+                    <img src={quickViewProduct.image} alt="Angle 1" className="w-full h-full object-cover" />
+                  </button>
+                  {quickViewProduct.hoverImage && (
+                    <button
+                      onClick={() => setActiveMedia({ type: 'image', src: quickViewProduct.hoverImage! })}
+                      className={`w-14 h-16 rounded overflow-hidden border-2 transition-all ${
+                        activeMedia.type === 'image' && activeMedia.src === quickViewProduct.hoverImage ? 'border-[#D4AF37]' : 'border-white/20 opacity-60'
+                      }`}
+                    >
+                      <img src={quickViewProduct.hoverImage} alt="Angle 2" className="w-full h-full object-cover" />
+                    </button>
+                  )}
+                </>
+              )}
+              {quickViewProduct.video && (
                 <button
-                  onClick={() => setActiveImage(quickViewProduct.hoverImage!)}
-                  className={`w-14 h-16 rounded overflow-hidden border-2 transition-all ${
-                    activeImage === quickViewProduct.hoverImage ? 'border-[#D4AF37]' : 'border-white/20 opacity-60'
+                  onClick={() => setActiveMedia({ type: 'video', src: quickViewProduct.video! })}
+                  className={`relative w-14 h-16 rounded overflow-hidden border-2 transition-all ${
+                    activeMedia.type === 'video' ? 'border-[#D4AF37]' : 'border-white/20 opacity-60'
                   }`}
                 >
-                  <img src={quickViewProduct.hoverImage} alt="Angle 2" className="w-full h-full object-cover" />
+                  <video src={quickViewProduct.video} muted loop autoPlay playsInline className="w-full h-full object-cover" />
+                  <span className="absolute inset-0 flex items-center justify-center bg-black/40">
+                    <Play className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                  </span>
                 </button>
               )}
             </div>

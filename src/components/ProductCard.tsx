@@ -42,12 +42,23 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       {/* Top Image Box */}
       <div className="relative aspect-[3/4] overflow-hidden bg-neutral-900 cursor-pointer" onClick={handleOpenPDP}>
-        <img
-          src={isHovered && product.hoverImage ? product.hoverImage : product.image}
-          alt={product.name}
-          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-          referrerPolicy="no-referrer"
-        />
+        {product.video ? (
+          <video
+            src={product.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover object-top"
+          />
+        ) : (
+          <img
+            src={isHovered && product.hoverImage ? product.hoverImage : product.image}
+            alt={product.name}
+            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
+        )}
 
         {/* Top Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">

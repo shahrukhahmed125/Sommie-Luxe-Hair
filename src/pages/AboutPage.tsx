@@ -35,7 +35,7 @@ export const AboutPage: React.FC = () => {
         {/* Big Editorial Image with Ken Burns breathing animation */}
         <div className="relative aspect-[4/3] sm:aspect-[16/7] w-full rounded-sm overflow-hidden mb-20 shadow-2xl bg-neutral-900 group">
           <img
-            src="/src/assets/images/editorial_founder_about_1794225327995.jpg"
+            src="/src/assets/images/campaign_confidence_editorial_1794224360110.jpg"
             alt="Sommie Luxe Hair Atelier - Inspecting Raw Human Hair"
             className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
             referrerPolicy="no-referrer"

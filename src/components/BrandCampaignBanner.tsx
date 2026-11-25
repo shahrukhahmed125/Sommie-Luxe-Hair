@@ -11,8 +11,8 @@ export const BrandCampaignBanner: React.FC<BrandCampaignBannerProps> = ({ onExpl
       {/* Background Editorial Photography Matching Ethereal Ice Blonde Campaign */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_platinum_ice_ethereal_1794319824644.jpg"
-          alt="Sommie Luxe Hair Editorial Campaign - Platinum Ice Blonde Royal Collection"
+          src="/src/assets/images/campaign_confidence_editorial_1794224360110.jpg"
+          alt="Sommie Luxe Hair Editorial Campaign - Confidence Looks Good On You"
           className="w-full h-full object-cover object-center brightness-[0.88] contrast-[1.08]"
           referrerPolicy="no-referrer"
         />

@@ -91,12 +91,23 @@ export const SearchModal: React.FC = () => {
                   }}
                   className="py-3 px-2 flex items-center gap-4 hover:bg-[#F5F0E6]/50 rounded cursor-pointer transition-colors"
                 >
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    className="w-14 h-16 object-cover object-top rounded-sm bg-neutral-900 shrink-0"
-                    referrerPolicy="no-referrer"
-                  />
+                  {p.video ? (
+                    <video
+                      src={p.video}
+                      muted
+                      loop
+                      autoPlay
+                      playsInline
+                      className="w-14 h-16 object-cover object-top rounded-sm bg-neutral-900 shrink-0"
+                    />
+                  ) : (
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      className="w-14 h-16 object-cover object-top rounded-sm bg-neutral-900 shrink-0"
+                      referrerPolicy="no-referrer"
+                    />
+                  )}
                   <div className="flex-1 min-w-0">
                     <p className="text-[10px] text-neutral-700 uppercase font-semibold">{p.collection}</p>
                     <h4 className="font-playfair font-bold text-sm text-[#050505]">{p.name}</h4>

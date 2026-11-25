@@ -4,7 +4,7 @@ export interface Product {
   id: string;
   name: string;
   subtitle: string;
-  category: 'straight' | 'deep-wave' | 'bouncy-curls' | 'ocean-wave';
+  category: 'straight' | 'deep-wave' | 'bouncy-curls' | 'ocean-wave' | 'braids';
   collection: string;
   priceGBP: number;
   priceUSD: number;
@@ -17,6 +17,7 @@ export interface Product {
   badge?: 'BEST SELLER' | 'NEW' | 'HD INVISIBLE LACE' | 'GLUELESS' | 'RAW VIRGIN';
   image: string;
   hoverImage?: string;
+  video?: string;
   lengths: number[];
   densities: string[];
   laceTypes: string[];
@@ -52,7 +53,7 @@ export interface CustomerReview {
 export interface CollectionCategory {
   id: string;
   name: string;
-  categoryKey: 'straight' | 'deep-wave' | 'bouncy-curls' | 'ocean-wave';
+  categoryKey: 'straight' | 'deep-wave' | 'bouncy-curls' | 'ocean-wave' | 'braids';
   headline: string;
   description: string;
   image: string;

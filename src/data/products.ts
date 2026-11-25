@@ -7,7 +7,7 @@ export const CATEGORIES: CollectionCategory[] = [
     categoryKey: 'straight',
     headline: 'Ice Platinum & Silk Bone Straight',
     description: 'Impeccable glass-like sheen, 100% cuticle-aligned single donor raw hair with full ends.',
-    image: '/src/assets/images/hero_platinum_ice_ethereal_1794319824644.jpg',
+    image: '/src/assets/images/hero_luxe_model_1794224355877.jpg',
     itemCount: '18 Signature Wigs'
   },
   {
@@ -16,7 +16,7 @@ export const CATEGORIES: CollectionCategory[] = [
     categoryKey: 'bouncy-curls',
     headline: 'Honey Caramel & Golden Waves',
     description: 'Dramatic Hollywood volume and rich body waves engineered for red-carpet presence.',
-    image: '/src/assets/images/hero_blonde_honey_silk_1794319804320.jpg',
+    image: '/src/assets/images/hero_luxe_glam_model_1794318811247.jpg',
     itemCount: '16 Signature Wigs'
   },
   {
@@ -36,6 +36,15 @@ export const CATEGORIES: CollectionCategory[] = [
     description: 'Soft cascading beach-luxury waves with an undetectable melted HD Swiss lace frontal.',
     image: '/src/assets/images/model_luxury_redhead_glam_1794319766874.jpg',
     itemCount: '12 Signature Wigs'
+  },
+  {
+    id: 'cat-braids',
+    name: 'Braided Wigs',
+    categoryKey: 'braids',
+    headline: 'Glueless Ready-to-Wear Braids',
+    description: 'Beautifully crafted long brown braids for an effortless, glue-free look in minutes.',
+    image: '/src/assets/images/model_brunette_glam_curls_1794318812960.jpg',
+    itemCount: '1 Signature Wig'
   }
 ];
 
@@ -161,6 +170,37 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
+    id: 'slh-13',
+    name: 'Glueless Braided Wig',
+    subtitle: 'Long Brown Knotless Braids · Glueless Ready-to-Wear Fit · No Glue Required',
+    category: 'braids',
+    collection: 'Ready-to-Wear Braids Collection',
+    priceGBP: 199,
+    priceUSD: 255,
+    priceNGN: 360000,
+    originalPriceGBP: 240,
+    originalPriceUSD: 310,
+    originalPriceNGN: 430000,
+    rating: 4.9,
+    reviewsCount: 64,
+    badge: 'GLUELESS',
+    image: '/src/assets/images/model_brunette_glam_curls_1794318812960.jpg',
+    hoverImage: '/src/assets/images/model_luxury_brunette_glam_1794319785389.jpg',
+    video: '/src/assets/images/product_video.mp4',
+    lengths: [24, 28, 32],
+    densities: ['Medium Volume', 'Extra Full Volume'],
+    laceTypes: ['Glueless Adjustable Fit', 'Full Glueless Band'],
+    description: 'Beautifully crafted long brown braids, designed for an effortless, ready-to-wear look without glue. Style: Long Braids · Colour: Brown · Fit: Glueless. Slip it on and go — no adhesives, no sew-in, no salon appointment needed.',
+    hairOrigin: 'Premium Braided Hair & Human Hair Blend',
+    hairTexture: 'Long Knotless Box Braids',
+    features: [
+      'Glueless adjustable straps for a secure, comfortable fit',
+      'Pre-styled long brown braids — zero daily styling required',
+      'Breathable cap construction for all-day wear',
+      'Protective style that safeguards your natural hair'
+    ]
+  },
+  {
     id: 'slh-05',
     name: 'The Toronto Penthouse Honey Ash Bouncy Body Wave 24"',
     subtitle: 'Canadian High-Fashion Luxe · Dimensional Ash Balayage · 250% Volume',
@@ -205,8 +245,8 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 215,
     badge: 'BEST SELLER',
-    image: '/src/assets/images/model_chinese_luxe_straight_1794319381952.jpg',
-    hoverImage: '/src/assets/images/hero_platinum_ice_ethereal_1794319824644.jpg',
+    image: '/src/assets/images/hero_luxe_model_1794224355877.jpg',
+    hoverImage: '/src/assets/images/hero_luxe_glam_model_1794318811247.jpg',
     lengths: [20, 24, 28, 32],
     densities: ['180% (Natural Luxe)', '200% (Glamour Full)', '250% (Ultra Heavy)'],
     laceTypes: ['13x6 HD Invisible Swiss Lace', '5x5 HD Melt Closure', 'Wear & Go Glueless'],
@@ -235,7 +275,7 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 194,
     badge: 'HD INVISIBLE LACE',
-    image: '/src/assets/images/model_blonde_russian_straight_1794318810647.jpg',
+    image: '/src/assets/images/hero_model_american_glam_1794319444164.jpg',
     hoverImage: '/src/assets/images/wig_blonde_613_raw_1794228193817.jpg',
     lengths: [20, 24, 28, 32],
     densities: ['180% (Natural Luxe)', '200% (Glamour Full)', '250% (Ultra Heavy)'],
@@ -296,7 +336,7 @@ export const PRODUCTS: Product[] = [
     reviewsCount: 118,
     badge: 'GLUELESS',
     image: '/src/assets/images/wig_blunt_bob_straight_1794225326720.jpg',
-    hoverImage: '/src/assets/images/hero_platinum_ice_ethereal_1794319824644.jpg',
+    hoverImage: '/src/assets/images/wig_blonde_613_raw_1794228193817.jpg',
     lengths: [12, 14, 16],
     densities: ['180% (Natural Luxe)', '200% (Full Precision)'],
     laceTypes: ['13x6 HD Invisible Swiss Lace', 'Wear & Go Glueless'],
@@ -325,7 +365,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 135,
     badge: 'BEST SELLER',
-    image: '/src/assets/images/wig_water_wave_wet_1794228194043.jpg',
+    image: '/src/assets/images/model_filipina_glam_waves_1794319399803.jpg',
     hoverImage: '/src/assets/images/model_luxury_brunette_glam_1794319785389.jpg',
     lengths: [20, 24, 28, 30],
     densities: ['180% (Natural Luxe)', '200% (Glamour Full)', '250% (Ultra Heavy)'],
@@ -355,7 +395,7 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 154,
     badge: 'RAW VIRGIN',
-    image: '/src/assets/images/banner_editorial_diverse_glam_1794318814560.jpg',
+    image: '/src/assets/images/hero_diverse_models_campaign_1794319428041.jpg',
     hoverImage: '/src/assets/images/model_luxury_redhead_glam_1794319766874.jpg',
     lengths: [28, 30, 32, 36],
     densities: ['200% (Glamour Full)', '250% (Ultra Heavy)'],
@@ -385,8 +425,8 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 142,
     badge: 'RAW VIRGIN',
-    image: '/src/assets/images/raw_bundles_showcase_1794228193955.jpg',
-    hoverImage: '/src/assets/images/hero_platinum_ice_ethereal_1794319824644.jpg',
+    image: '/src/assets/images/wig_curly_afro_kinky_1794225328533.jpg',
+    hoverImage: '/src/assets/images/hero_luxe_model_1794224355877.jpg',
     lengths: [24, 28, 32],
     densities: ['3 Full Bundles (300g)', '4 Full Bundles (400g)'],
     laceTypes: ['13x6 HD Swiss Frontal Included', '5x5 HD Closure Included'],
@@ -427,7 +467,7 @@ export const REVIEWS: CustomerReview[] = [
     productName: 'The Ethereal Ice Platinum 30" Bone Straight Raw HD Wig',
     hairLength: '30 inches / 200% Density',
     verified: true,
-    avatarUrl: '/src/assets/images/hero_platinum_ice_ethereal_1794319824644.jpg'
+    avatarUrl: '/src/assets/images/hero_model_american_glam_1794319444164.jpg'
   },
   {
     id: 'rev-03',

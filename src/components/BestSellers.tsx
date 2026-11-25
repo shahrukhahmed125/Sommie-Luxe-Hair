@@ -15,7 +15,8 @@ export const BestSellers: React.FC<BestSellersProps> = ({ initialFilter = 'all' 
     { id: 'straight', label: 'Bone Straight' },
     { id: 'deep-wave', label: 'Deep Wave' },
     { id: 'bouncy-curls', label: 'Bouncy Curls' },
-    { id: 'ocean-wave', label: 'Ocean Wave' }
+    { id: 'ocean-wave', label: 'Ocean Wave' },
+    { id: 'braids', label: 'Braided Wigs' }
   ];
 
   const filteredProducts = filter === 'all'

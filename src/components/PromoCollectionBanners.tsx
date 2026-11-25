@@ -57,7 +57,7 @@ export const PromoCollectionBanners: React.FC<PromoCollectionBannersProps> = () 
           {/* Banner 2: Raw Virgin Temple Hair */}
           <div className="group relative overflow-hidden bg-[#050505] min-h-[420px] rounded-sm flex flex-col justify-end p-8 text-white transition-all duration-500 hover:shadow-2xl hover:shadow-black/20">
             <img
-              src="/src/assets/images/raw_bundles_showcase_1794228193955.jpg"
+              src="/src/assets/images/hero_diverse_models_campaign_1794319428041.jpg"
               alt="Raw Virgin Temple Hair"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-80 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
               referrerPolicy="no-referrer"
@@ -87,7 +87,7 @@ export const PromoCollectionBanners: React.FC<PromoCollectionBannersProps> = () 
           {/* Banner 3: Ultra-Thin HD Invisible Lace */}
           <div className="group relative overflow-hidden bg-[#050505] min-h-[420px] rounded-sm flex flex-col justify-end p-8 text-white transition-all duration-500 hover:shadow-2xl hover:shadow-black/20">
             <img
-              src="/src/assets/images/wig_honey_blonde_straight_1794225327944.jpg"
+              src="/src/assets/images/hero_luxe_glam_model_1794318811247.jpg"
               alt="Ultra-Thin HD Invisible Lace"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-75 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700"
               referrerPolicy="no-referrer"

@@ -14,7 +14,8 @@ import {
   ArrowRight,
   HelpCircle,
   Clock,
-  RotateCcw
+  RotateCcw,
+  Play
 } from 'lucide-react';
 
 export const ProductDetailPage: React.FC = () => {
@@ -34,7 +35,11 @@ export const ProductDetailPage: React.FC = () => {
   const [selectedDensity, setSelectedDensity] = useState<string>(product.densities[0]);
   const [selectedLace, setSelectedLace] = useState<string>(product.laceTypes[0]);
   const [selectedCapSize, setSelectedCapSize] = useState<'Small (21.5")' | 'Medium (22.5")' | 'Large (23.5")'>('Medium (22.5")');
-  const [activeImage, setActiveImage] = useState<string>(product.image);
+  const [activeMedia, setActiveMedia] = useState<{ type: 'image' | 'video'; src: string }>(
+    product.video
+      ? { type: 'video', src: product.video }
+      : { type: 'image', src: product.image }
+  );
   const [quantity, setQuantity] = useState<number>(1);
   const [activeAccordion, setActiveAccordion] = useState<string | null>('specs');
   const [destinationCity, setDestinationCity] = useState('London (UK)');
@@ -45,7 +50,11 @@ export const ProductDetailPage: React.FC = () => {
       setSelectedLength(product.lengths[0]);
       setSelectedDensity(product.densities[0]);
       setSelectedLace(product.laceTypes[0]);
-      setActiveImage(product.image);
+      setActiveMedia(
+        product.video
+          ? { type: 'video', src: product.video }
+          : { type: 'image', src: product.image }
+      );
       setQuantity(1);
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,13 +62,15 @@ export const ProductDetailPage: React.FC = () => {
 
   const inWishlist = isInWishlist(product.id);
 
-  // Dynamic gallery items
-  const gallery = [
-    product.image,
-    product.hoverImage,
-    '/src/assets/images/hero_luxe_glam_model_1794318811247.jpg',
-    '/src/assets/images/raw_bundles_showcase_1794228193955.jpg'
-  ].filter(Boolean) as string[];
+  // Dynamic gallery items — products with a video show video only
+  const galleryMedia: { type: 'image' | 'video'; src: string }[] = product.video
+    ? [{ type: 'video', src: product.video }]
+    : [
+        { type: 'image', src: product.image },
+        ...(product.hoverImage ? [{ type: 'image' as const, src: product.hoverImage }] : []),
+        { type: 'image', src: '/src/assets/images/hero_luxe_glam_model_1794318811247.jpg' },
+        { type: 'image', src: '/src/assets/images/hero_diverse_models_campaign_1794319428041.jpg' }
+      ];
 
   const handleBuyNow = () => {
     addToCart(product, selectedLength, selectedDensity, selectedLace, quantity);
@@ -96,12 +107,24 @@ export const ProductDetailPage: React.FC = () => {
           <div className="space-y-4">
             {/* Main Stage Image with Zoom hover */}
             <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden bg-neutral-900 border border-[#E8DFC9] shadow-md group">
-              <img
-                src={activeImage}
-                alt={product.name}
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
+              {activeMedia.type === 'video' ? (
+                <video
+                  key={activeMedia.src}
+                  src={activeMedia.src}
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <img
+                  src={activeMedia.src}
+                  alt={product.name}
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+              )}
 
               {product.badge && (
                 <span className="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 bg-[#D4AF37] text-black rounded-sm shadow-md">
@@ -123,21 +146,32 @@ export const ProductDetailPage: React.FC = () => {
             </div>
 
             {/* Thumbnail Switcher */}
+            {galleryMedia.length > 1 && (
             <div className="grid grid-cols-4 gap-3">
-              {gallery.map((img, idx) => (
+              {galleryMedia.map((media, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setActiveImage(img)}
-                  className={`aspect-square rounded-sm overflow-hidden border-2 transition-all ${
-                    activeImage === img
+                  onClick={() => setActiveMedia(media)}
+                  className={`relative aspect-square rounded-sm overflow-hidden border-2 transition-all ${
+                    activeMedia.type === media.type && activeMedia.src === media.src
                       ? 'border-[#D4AF37] ring-2 ring-[#D4AF37]/30 scale-[1.02]'
                       : 'border-neutral-200 opacity-70 hover:opacity-100'
                   }`}
                 >
-                  <img src={img} alt={`View ${idx + 1}`} className="w-full h-full object-cover" />
+                  {media.type === 'video' ? (
+                    <>
+                      <video src={media.src} muted loop autoPlay playsInline className="w-full h-full object-cover" />
+                      <span className="absolute inset-0 flex items-center justify-center bg-black/40">
+                        <Play className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
+                      </span>
+                    </>
+                  ) : (
+                    <img src={media.src} alt={`View ${idx + 1}`} className="w-full h-full object-cover" />
+                  )}
                 </button>
               ))}
             </div>
+            )}
           </div>
 
           {/* Purchase Module Right */}

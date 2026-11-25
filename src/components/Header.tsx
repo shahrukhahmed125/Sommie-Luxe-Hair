@@ -189,7 +189,7 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* UNice-Inspired Mega Menu */}
+      {/* UNice-Inspired Mega Menu — content varies by active menu */}
       {activeMegaMenu && (
         <div
           className="hidden lg:block absolute left-0 right-0 top-full bg-[#FFFFFF] border-b border-[#D4AF37]/30 shadow-2xl z-30 transition-all duration-300 animate-fadeIn"
@@ -197,72 +197,177 @@ export const Header: React.FC = () => {
           onMouseLeave={() => setActiveMegaMenu(null)}
         >
           <div className="max-w-[1440px] mx-auto px-8 py-8 grid grid-cols-5 gap-8">
-            {/* Column 1: Featured Categories */}
+            {/* Column 1: Featured Categories — varies by menu */}
             <div>
               <p className="text-xs uppercase tracking-[0.16em] font-semibold text-[#050505] mb-4 pb-1 border-b border-[#F5F0E6]">
-                Shop By Texture
+                {activeMegaMenu === 'shop' ? 'Shop All Categories' : 'Related Styles'}
               </p>
               <ul className="space-y-2.5 text-xs text-neutral-600">
-                <li>
-                  <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'straight' });
-                      setActiveMegaMenu(null);
-                    }}
-                    className="hover:text-[#C6A15B] transition-colors flex items-center justify-between w-full"
-                  >
-                    <span>Bone Straight Raw Hair</span>
-                    <span className="text-[10px] text-[#C6A15B]">Popular</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'deep-wave' });
-                      setActiveMegaMenu(null);
-                    }}
-                    className="hover:text-[#C6A15B] transition-colors"
-                  >
-                    Hydrated Deep Wave Curls
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'bouncy-curls' });
-                      setActiveMegaMenu(null);
-                    }}
-                    className="hover:text-[#C6A15B] transition-colors"
-                  >
-                    Voluminous Bouncy Body Curls
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'ocean-wave' });
-                      setActiveMegaMenu(null);
-                    }}
-                    className="hover:text-[#C6A15B] transition-colors"
-                  >
-                    Resort Ocean Wave
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'all' });
-                      setActiveMegaMenu(null);
-                    }}
-                    className="text-[#C6A15B] font-semibold hover:underline"
-                  >
-                    View All 12 Royal Wigs →
-                  </button>
-                </li>
+                {activeMegaMenu === 'shop' ? (
+                  <>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors flex items-center justify-between w-full"
+                      >
+                        <span>Bone Straight Raw Hair</span>
+                        <span className="text-[10px] text-[#C6A15B]">Popular</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Hydrated Deep Wave Curls
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Voluminous Bouncy Body Curls
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'ocean-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Resort Ocean Wave
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'braids' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Glueless Braided Wigs
+                      </button>
+                    </li>
+                  </>
+                ) : activeMegaMenu === 'straight' ? (
+                  <>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors font-semibold"
+                      >
+                        All Straight Hair Wigs
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        14" Chic Executive Blunt Bob
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        24" - 28" Everyday Glamour
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        30" - 36" Floor Length Empress
+                      </button>
+                    </li>
+                  </>
+                ) : activeMegaMenu === 'deep-wave' ? (
+                  <>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors font-semibold"
+                      >
+                        All Deep Wave Wigs
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        250% Red Carpet Heavy Density
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Wet Water Wave Look
+                      </button>
+                    </li>
+                  </>
+                ) : activeMegaMenu === 'bouncy-curls' ? (
+                  <>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors font-semibold"
+                      >
+                        All Bouncy Curls Wigs
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Honey Caramel Blonde Waves
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Honey Ash Dimensional Curls
+                      </button>
+                    </li>
+                  </>
+                ) : activeMegaMenu === 'ocean-wave' ? (
+                  <>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'ocean-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors font-semibold"
+                      >
+                        All Ocean Wave Wigs
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'ocean-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        Venetian Copper Auburn S-Wave
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => { navigateTo('shop', { category: 'ocean-wave' }); setActiveMegaMenu(null); }}
+                        className="hover:text-[#C6A15B] transition-colors"
+                      >
+                        32" Floor Length Dynasty
+                      </button>
+                    </li>
+                  </>
+                ) : null}
               </ul>
             </div>
 
-            {/* Column 2: Lace Architecture */}
+            {/* Column 2: Lace Architecture — same for all */}
             <div>
               <p className="text-xs uppercase tracking-[0.16em] font-semibold text-[#050505] mb-4 pb-1 border-b border-[#F5F0E6]">
                 Lace & Construction
@@ -270,10 +375,7 @@ export const Header: React.FC = () => {
               <ul className="space-y-2.5 text-xs text-neutral-600">
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'all' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'all' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors text-left"
                   >
                     13x6 HD Swiss Frontal (Deep Part)
@@ -281,10 +383,7 @@ export const Header: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'all' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'all' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors text-left"
                   >
                     5x5 HD Invisible Closure
@@ -292,10 +391,7 @@ export const Header: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'all' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'all' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors flex items-center justify-between w-full"
                   >
                     <span>Wear & Go™ Glueless Wigs</span>
@@ -304,10 +400,7 @@ export const Header: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('guide');
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('guide'); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors text-left text-[#C6A15B]"
                   >
                     HD Lace vs Transparent Guide →
@@ -316,7 +409,7 @@ export const Header: React.FC = () => {
               </ul>
             </div>
 
-            {/* Column 3: Length & Density */}
+            {/* Column 3: Length & Density — same for all */}
             <div>
               <p className="text-xs uppercase tracking-[0.16em] font-semibold text-[#050505] mb-4 pb-1 border-b border-[#F5F0E6]">
                 Length & Density
@@ -324,10 +417,7 @@ export const Header: React.FC = () => {
               <ul className="space-y-2.5 text-xs text-neutral-600">
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'straight' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors"
                   >
                     14" Chic Executive Blunt Bob
@@ -335,10 +425,7 @@ export const Header: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'all' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'all' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors"
                   >
                     24" - 28" Everyday Glamour
@@ -346,10 +433,7 @@ export const Header: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'all' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'all' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors"
                   >
                     30" - 36" Floor Length Empress
@@ -357,10 +441,7 @@ export const Header: React.FC = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => {
-                      navigateTo('shop', { category: 'bouncy-curls' });
-                      setActiveMegaMenu(null);
-                    }}
+                    onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
                     className="hover:text-[#C6A15B] transition-colors"
                   >
                     250% Red Carpet Heavy Density
@@ -369,51 +450,185 @@ export const Header: React.FC = () => {
               </ul>
             </div>
 
-            {/* Column 4 & 5: Visual Feature Cards with Looping Shimmer */}
+            {/* Column 4 & 5: Visual Feature Cards — varies by menu */}
             <div className="col-span-2 grid grid-cols-2 gap-4 bg-[#F5F0E6]/50 p-4 rounded-sm border border-[#D4AF37]/20">
-              <div
-                onClick={() => {
-                  navigateTo('shop', { category: 'straight' });
-                  setActiveMegaMenu(null);
-                }}
-                className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
-              >
-                <img
-                  src="/src/assets/images/wig_blonde_613_raw_1794228193817.jpg"
-                  alt="Monaco Ice 613 Raw Wig"
-                  className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
-                  <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Haute 613 Blonde</span>
-                  <p className="font-cormorant text-base font-bold leading-tight">Monaco Ice 613 Frontal</p>
-                  <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">
-                    Shop Look →
-                  </span>
-                </div>
-              </div>
-
-              <div
-                onClick={() => {
-                  navigateTo('shop', { category: 'deep-wave' });
-                  setActiveMegaMenu(null);
-                }}
-                className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
-              >
-                <img
-                  src="/src/assets/images/wig_water_wave_wet_1794228194043.jpg"
-                  alt="Bora Bora Wet Water Wave"
-                  className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
-                  <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">New Arrival</span>
-                  <p className="font-cormorant text-base font-bold leading-tight">Bora Bora Water Wave</p>
-                  <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">
-                    Shop Look →
-                  </span>
-                </div>
-              </div>
+              {activeMegaMenu === 'straight' ? (
+                <>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/wig_blonde_613_raw_1794228193817.jpg"
+                      alt="Monaco Ice 613 Raw Wig"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Haute 613 Blonde</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Monaco Ice 613 Frontal</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/wig_blunt_bob_straight_1794225326720.jpg"
+                      alt="Victoria Glueless Blunt Bob"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Glueless</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Victoria Blunt Bob</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                </>
+              ) : activeMegaMenu === 'deep-wave' ? (
+                <>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/model_filipina_glam_waves_1794319399803.jpg"
+                      alt="Bora Bora Wet Water Wave"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">New Arrival</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Bora Bora Water Wave</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/model_luxury_brunette_glam_1794319785389.jpg"
+                      alt="Milan Espresso Brunette"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Best Seller</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Milan Espresso Brunette</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                </>
+              ) : activeMegaMenu === 'bouncy-curls' ? (
+                <>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/hero_blonde_honey_silk_1794319804320.jpg"
+                      alt="Beverly Hills Honey Caramel"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Best Seller</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Beverly Hills Honey Caramel</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'bouncy-curls' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/model_canadian_couture_bouncy_1794319413726.jpg"
+                      alt="Toronto Honey Ash"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">HD Lace</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Toronto Honey Ash</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                </>
+              ) : activeMegaMenu === 'ocean-wave' ? (
+                <>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'ocean-wave' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/model_luxury_redhead_glam_1794319766874.jpg"
+                      alt="Venetian Copper Auburn"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Exclusive</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Venetian Copper Auburn</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'ocean-wave' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/hero_diverse_models_campaign_1794319428041.jpg"
+                      alt="The Dynasty Ocean Wave"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Raw Virgin</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">The Dynasty 32" Ocean Wave</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                /* Default / 'shop' fallback */
+                <>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'straight' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/wig_blonde_613_raw_1794228193817.jpg"
+                      alt="Monaco Ice 613 Raw Wig"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">Haute 613 Blonde</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Monaco Ice 613 Frontal</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => { navigateTo('shop', { category: 'deep-wave' }); setActiveMegaMenu(null); }}
+                    className="relative group overflow-hidden rounded-sm bg-black cursor-pointer aspect-[4/3]"
+                  >
+                    <img
+                      src="/src/assets/images/model_filipina_glam_waves_1794319399803.jpg"
+                      alt="Bora Bora Wet Water Wave"
+                      className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-3 flex flex-col justify-end text-white">
+                      <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">New Arrival</span>
+                      <p className="font-cormorant text-base font-bold leading-tight">Bora Bora Water Wave</p>
+                      <span className="text-[11px] text-[#C6A15B] font-semibold mt-1 flex items-center gap-1">Shop Look →</span>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

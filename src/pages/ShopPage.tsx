@@ -26,7 +26,8 @@ export const ShopPage: React.FC = () => {
     { id: 'straight', label: 'Bone Straight Raw' },
     { id: 'deep-wave', label: 'Deep Wave Curls' },
     { id: 'bouncy-curls', label: 'Bouncy Hollywood Curls' },
-    { id: 'ocean-wave', label: 'Ocean Beach Wave' }
+    { id: 'ocean-wave', label: 'Ocean Beach Wave' },
+    { id: 'braids', label: 'Glueless Braids' }
   ];
 
   const laceOptions = [

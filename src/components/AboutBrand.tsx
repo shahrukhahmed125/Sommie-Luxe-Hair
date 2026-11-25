@@ -14,7 +14,7 @@ export const AboutBrand: React.FC = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-sm aspect-[4/5] bg-neutral-900 shadow-2xl group">
               <img
-                src="/src/assets/images/editorial_founder_about_1794225327995.jpg"
+                src="/src/assets/images/campaign_confidence_editorial_1794224360110.jpg"
                 alt="Sommie Luxe Hair Founder & Atelier - Inspecting pristine raw human hair bundles"
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"

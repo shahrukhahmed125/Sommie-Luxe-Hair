@@ -115,12 +115,23 @@ export const CartDrawer: React.FC = () => {
               cart.map((item) => (
                 <div key={item.id} className="py-4 flex gap-4">
                   {/* Thumbnail */}
-                  <img
-                    src={item.product.image}
-                    alt={item.product.name}
-                    className="w-20 h-24 object-cover object-top rounded-sm bg-neutral-900 shrink-0 border border-neutral-200"
-                    referrerPolicy="no-referrer"
-                  />
+                  {item.product.video ? (
+                    <video
+                      src={item.product.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-20 h-24 object-cover object-top rounded-sm bg-neutral-900 shrink-0 border border-neutral-200"
+                    />
+                  ) : (
+                    <img
+                      src={item.product.image}
+                      alt={item.product.name}
+                      className="w-20 h-24 object-cover object-top rounded-sm bg-neutral-900 shrink-0 border border-neutral-200"
+                      referrerPolicy="no-referrer"
+                    />
+                  )}
 
                   {/* Details */}
                   <div className="flex-1 flex flex-col justify-between text-xs">
